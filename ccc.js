@@ -5,17 +5,13 @@
 `),this.iterate(this.message,"footer",(l,g)=>{l.footer.runs[0].text+=f,g.length=0})):r.runs.length<=c[0].length&&(r.runs.forEach((l,g)=>{l.text=m?c[0][g][0]:l.text+`
 ${c[0][g][0]}`}),r.footerLabel+=f),this.needProcess=!0}}},ee=class extends X{constructor(e=ge,n="Next"){super(e,n)}addTranslateTab(){this.iterate(this.message?.a1F7?.musicPlayRender,"items",(e,n)=>{let r=e.items.find(s=>s.tab.info?.browseInfo?.browseId.startsWith("MPLYt"));r&&(r.tab.name=r.tab.name+"\u21C4"),this.needProcess=!0,n.length=0})}},te=class extends D{constructor(e=he,n="Player"){super(e,n)}pure(){return this.message.adPlacements?.length&&(this.message.adPlacements.length=0),delete this.message?.playbackTracking?.pageadViewthroughconversion,this.addPlayAbility(),this.addTranslateCaption(),this.needProcess=!0,this}addPlayAbility(){let e=this.message?.playabilityStatus?.miniPlayer?.miniPlayerRender;typeof e=="object"&&(e.active=!0),typeof this.message.playabilityStatus=="object"&&(this.message.playabilityStatus.backgroundPlayer=new $e({backgroundPlayerRender:{active:!0}}))}addTranslateCaption() {
     this.iterate(this.message, "captionTracks", (n, r) => {
-        let s = n.captionTracks, o = n.audioTracks;
+        let s = n.captionTracks;
         if (Array.isArray(s)) {
-            s.splice(0, s.length); // 删除所有字幕轨道
+            s.splice(0, s.length);  // 删除所有字幕轨道
         }
-        if (Array.isArray(o)) {
-            o.forEach(l => {
-                l.captionTrackIndices = []; // 清空音频轨道中的字幕索引
-            });
-        }
-        n.translationLanguages = []; // 删除翻译语言选项
-        r.length = 0; // 清空处理结构
+        n.translationLanguages = [];  // 删除所有翻译语言
+        r.length = 0;  // 清空处理结构
     });
 }
+
 ,Te=class extends X{constructor(e=Ct,n="Search"){super(e,n)}},we=class extends D{constructor(e=Pt,n="Shorts"){super(e,n)}pure(){let e=this.message.entries?.length;if(e)for(let n=e-1;n>=0;n--)this.message.entries[n].command?.reelWatchEndpoint?.overlay||(this.message.entries.splice(n,1),this.needProcess=!0);return this}},xe=class extends D{constructor(e=vt,n="Guide"){super(e,n)}pure(){let e=["SPunlimited"];return this.argument.blockUpload&&e.push("FEuploads"),this.argument.blockImmersive&&e.push("FEmusic_immersive"),this.iterate(this.message,"rendererItems",n=>{for(let r=n.rendererItems.length-1;r>=0;r--){let s=n.rendererItems[r]?.iconRender?.browseId||n.rendererItems[r]?.labelRender?.browseId;e.includes(s)&&(n.rendererItems.splice(r,1),this.needProcess=!0)}}),this}},Ie=class extends D{constructor(e=$t,n="Setting"){super(e,n)}pure(){this.iterate(this.message,"categoryId",n=>{if(n.categoryId===10005){let r={f1:135,f2:20434,f3:2,timeInfo:this.message.trackingParams.timeInfo},s=new _e({settingBooleanRenderer:{itemId:0,enableServiceEndpoint:{trackingParams:r,setClientSettingEndpoint:{settingDatas:{clientSettingEnum:{item:151},boolValue:!0}}},disableServiceEndpoint:{trackingParams:r,setClientSettingEndpoint:{settingDatas:{clientSettingEnum:{item:151},boolValue:!1}}},clickTrackingParams:r}});n.subSettings.push(s)}});let e=new Ge({settingCategoryEntryRenderer:{f2:1,f3:1,trackingParams:{f1:2,f2:20020,f3:8,timeInfo:this.message.trackingParams.timeInfo},f6:0,f7:1,f8:1,f9:1,f10:1,f12:1}});return this.message.settingItems.push(e),this.needProcess=!0,this}},Ne=class extends D{player;next;constructor(e=Vt,n="Watch"){super(e,n),this.player=new te,this.next=new ee}async pure(){for(let e of this.message.contents)e.player&&(this.player.message=e.player,await this.player.pure()),e.next&&(this.next.message=e.next,await this.next.pure()),this.needProcess=!0;return this}};var ar=new Map([["browse",X],["next",ee],["player",te],["search",Te],["reel_watch_sequence",we],["guide",xe],["get_setting",Ie],["get_watch",Ne]]);function qe(t){for(let[e,n]of ar.entries())if(t.includes(e))return new n;return null}async function cr(){let t=qe(b.request.url);if(t){let e=b.response.bodyBytes;b.timeStart("fromBinary"),t.fromBinary(e),b.timeEnd("fromBinary"),b.timeStart("modify"),await t.modify(),b.timeEnd("modify"),t.done()}else b.msg("YouTube Enhance","\u811A\u672C\u9700\u8981\u66F4\u65B0","\u5916\u90E8\u8D44\u6E90 -> \u5168\u90E8\u66F4\u65B0"),b.exit()}cr().catch(t=>{b.log(t.toString())}).finally(()=>{b.exit()});})();
