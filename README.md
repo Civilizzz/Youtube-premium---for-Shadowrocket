@@ -1,13 +1,13 @@
 <div align="center">
 
-❤️I am 
+I am 
 <span style="color:pink;">C</span>
 <span style="color:orange;">i</span>
 <span style="color:yellow;">v</span>
 <span style="color:green;">i</span>
 <span style="color:blue;">l</span>
 <span style="color:purple;">i</span>
-❤️
+
 
 </div>
 
