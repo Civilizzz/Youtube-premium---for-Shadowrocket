@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+  <style>
+    .letter {
+      font-size: 48px;
+      font-family: Arial, sans-serif;
+      animation: color-change 3s infinite;
+    }
+
+    #C { animation-delay: 0s; }
+    #i1 { animation-delay: 0.5s; }
+    #v { animation-delay: 1s; }
+    #i2 { animation-delay: 1.5s; }
+    #l { animation-delay: 2s; }
+    #i3 { animation-delay: 2.5s; }
+
+    @keyframes color-change {
+      0% { fill: pink; }
+      20% { fill: orange; }
+      40% { fill: yellow; }
+      60% { fill: green; }
+      80% { fill: blue; }
+      100% { fill: purple; }
+    }
+  </style>
+
+  <text x="10" y="60">
+    <tspan class="letter" id="C">C</tspan>
+    <tspan class="letter" id="i1">i</tspan>
+    <tspan class="letter" id="v">v</tspan>
+    <tspan class="letter" id="i2">i</tspan>
+    <tspan class="letter" id="l">l</tspan>
+    <tspan class="letter" id="i3">i</tspan>
+  </text>
+</svg>
