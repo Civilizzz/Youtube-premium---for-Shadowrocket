@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <style>
+    .letter {
+      font-size: 48px;
+      font-family: Arial, sans-serif;
+      animation: color-change 3s infinite, jump 1s infinite;
+    }
+
+    #C { animation-delay: 0s; }
+    #i1 { animation-delay: 0.2s; }
+    #v { animation-delay: 0.4s; }
+    #i2 { animation-delay: 0.6s; }
+    #l { animation-delay: 0.8s; }
+    #i3 { animation-delay: 1s; }
+
+    @keyframes color-change {
+      0% { fill: pink; }
+      20% { fill: orange; }
+      40% { fill: red; }  <!-- 这里将黄色改为红色 -->
+      60% { fill: green; }
+      80% { fill: blue; }
+      100% { fill: purple; }
+    }
+
+    @keyframes jump {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    text {
+      text-anchor: middle;
+    }
+  </style>
+
+  <text x="200" y="100">
+    <tspan class="letter" id="C">C</tspan>
+    <tspan class="letter" id="i1">i</tspan>
+    <tspan class="letter" id="v">v</tspan>
+    <tspan class="letter" id="i2">i</tspan>
+    <tspan class="letter" id="l">l</tspan>
+    <tspan class="letter" id="i3">i</tspan>
+  </text>
+</svg>
