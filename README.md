@@ -11,7 +11,7 @@
 
 1. *請下載 Shadowrocket （Apple Store中最實用的VPN的代理配置軟件）*
 2. *在配置的‘模組’區域，添加新模塊*
-3. *粘貼<複製此模塊代碼.txt>的内容。*
+3. *粘貼<請複製此模塊代碼.txt>的内容。*
 4. *重啓Shadowrocket即可使用。*
 
 
@@ -21,7 +21,7 @@ I've created a JavaScript code that allows you to enjoy YouTube Premium features
 *If you're an iOS user, please follow these steps:
 1.Download Shadowrocket: This is a popular proxy configuration app available on the Apple App Store.
 2.Add a new module in config: Within the Shadowrocket app, navigate to the "Modules" section.
-3.Paste the code: Copy the contents of the "複製此模塊代碼.txt" file and paste it into the new module you've created.
+3.Paste the code: Copy the contents of the <請複製此模塊代碼.txt> and paste it into the new module you've created.
 4.Restart Shadowrocket, you'll enjoy free YouTube Premium features!
 
 
