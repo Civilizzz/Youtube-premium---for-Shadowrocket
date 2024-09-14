@@ -1,8 +1,8 @@
-*我寫了一個javascript代碼，可免費使用YouTube premium功能（後臺播放，無廣告，Youtube Music歌詞翻譯等）*
+*我寫了一個 javascript 代碼，可免費使用 YouTube premium 功能（後臺播放，無廣告，Youtube Music歌詞翻譯等）*
 
-*如果你是IOS用戶*
+**如果你是IOS用戶*
 
-1. *請下載Shadowrocket（Apple Store中最實用的VPN的代理配置軟件）*
+1. *請下載 Shadowrocket （Apple Store中最實用的VPN的代理配置軟件）*
 2. *在配置的‘模組’區域，添加新模塊*
 3. *粘貼<複製此模塊代碼.txt>的内容。*
 4. *重啓Shadowrocket即可使用。*
