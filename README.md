@@ -7,6 +7,6 @@
 
 
 
-## 🌟 Welcome to My GitHub Profile! 🌟
+🌟 Welcome to My GitHub Profile! 🌟
 
 Designed By Civili
