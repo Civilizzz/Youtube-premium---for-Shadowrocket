@@ -1,6 +1,6 @@
 <div align="center">
 
-![Civili Dynamic Text](./civili.svg)
+![Civili Dynamic Text](./c.svg)
 
 </div>
 
